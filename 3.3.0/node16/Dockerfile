@@ -14,9 +14,6 @@ RUN apt-get update -qq \
       wget \
     && rm -rf /var/lib/apt/lists/*
 
-
-FROM base AS rails-runner
-
 WORKDIR /app
 
 COPY --from=node-16 /usr/local/bin/node /usr/local/bin/

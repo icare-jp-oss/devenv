@@ -1,6 +1,6 @@
 FROM node:16.20.2-bullseye AS node-16
 
-FROM ruby:3.2.3-bullseye
+FROM ruby:3.2.4-bullseye
 
 ENV LANG C.UTF-8
 

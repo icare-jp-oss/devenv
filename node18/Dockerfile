@@ -1,6 +1,6 @@
 FROM node:18.19.0-bullseye AS node-18
 
-FROM ruby:3.2.3-bullseye
+FROM ruby:3.2.4-bullseye
 
 WORKDIR /app
 

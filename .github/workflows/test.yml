@@ -1,0 +1,21 @@
+name: Docker build test
+
+on:
+  pull_request:
+    paths:
+     - "**/Dockerfile"
+
+jobs:
+  docker-build-test:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        context: ["3.3.0/node16", "3.3.0/node18", "3.3.0p/node16", "3.3.0p/node18", "node16", "node18"]
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Build Docker image
+        run: docker build -t test-image ${{ matrix.context }}
+
+      - name: Test Docker image
+        run: docker run test-image echo "Hello, World!"

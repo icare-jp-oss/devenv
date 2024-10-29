@@ -1,7 +1,7 @@
 # syntax=docker/dockerfile:1
 FROM node:18.20.2-bullseye AS node
 
-FROM ruby:3.2.3-bullseye
+FROM ruby:3.3.5-bullseye
 
 # Let NodeModules install into /pnpm.
 ENV PNPM_HOME=/pnpm
@@ -38,3 +38,4 @@ RUN <<EOF
   yarn --version
   corepack --version
 EOF
+

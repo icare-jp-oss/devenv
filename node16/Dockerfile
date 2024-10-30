@@ -1,6 +1,6 @@
 FROM node:16.20.2-bullseye AS node-16
 
-FROM ruby:3.2.4-bullseye
+FROM ruby:3.3.5-bullseye
 
 ENV LANG C.UTF-8
 
@@ -57,3 +57,4 @@ RUN wget https://noto-website-2.storage.googleapis.com/pkgs/NotoSansCJKjp-hinted
 
 RUN pip3 install awscli --upgrade --user
 RUN echo "export PATH=~/.local/bin:$PATH" >> ~/.bashrc
+
